@@ -1,0 +1,8 @@
+.idea/
+*.iml
+
+bin/
+pkg/
+
+
+.DS_Store
