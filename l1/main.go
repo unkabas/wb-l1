@@ -16,15 +16,15 @@ type Action struct {
 }
 
 // методы Human
-func (h Human) PrintGender() {
+func (h *Human) PrintGender() {
 	fmt.Printf("%s is a %s\n", h.Name, h.Gender)
 }
-func (h Human) PrintAge() {
+func (h *Human) PrintAge() {
 	fmt.Printf("%s is %d years old\n", h.Name, h.Age)
 }
 
 // метод Action
-func (a Action) PrintJob() {
+func (a *Action) PrintJob() {
 	fmt.Printf("%s is a(an) %s\n", a.Name, a.Job)
 
 }
