@@ -11,21 +11,14 @@ func main() {
 		key := int(num/10) * 10
 		groups[key] = append(groups[key], num)
 	}
-	//собираем все ключи
+
 	var keys []int
 	for k := range groups {
 		keys = append(keys, k)
 	}
-	//сортируем пузырем
-	n := len(keys)
-	for i := 0; i < n-1; i++ {
-		for j := 0; j < n-i-1; j++ {
-			if keys[j] > keys[j+1] {
-				keys[j], keys[j+1] = keys[j+1], keys[j]
-			}
-		}
-	}
+
 	for _, key := range keys {
-		fmt.Printf("%d: %.1f\n", key, groups[key])
+		fmt.Printf("%d: %v\n", key, groups[key])
 	}
+
 }
